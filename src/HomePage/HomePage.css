@@ -1,0 +1,16 @@
+.list-books-title{
+    padding: 10px 0;
+    background: #9575cd;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    color: white;
+}
+.home .row{
+    justify-content: center;
+    border-bottom: 1px solid #9575cd;
+}
+.home h3 {
+    margin-top: 45px;
+    font-weight: 400;
+}
