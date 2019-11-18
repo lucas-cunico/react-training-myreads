@@ -14,3 +14,26 @@
     margin-top: 45px;
     font-weight: 400;
 }
+.home .plus{
+    border-radius: 50%;
+    background-color: darkgreen;
+    font-size: 22px;
+    position: fixed;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    right: 240px;
+    color: white;
+    font-weight: bold;
+    transition: all ease 0.5s;
+    border: 1px solid darkgreen;
+    text-decoration: none;
+}
+.home .plus:hover{
+    background-color: white;
+    color: darkgreen;
+}
