@@ -1,6 +1,9 @@
 import React from "react";
 import "./HomePage.css";
 import Shelf from '../Shelf'
+import {
+  Link
+} from "react-router-dom";
 
 class HomePage extends React.Component {
   render() {
@@ -11,6 +14,7 @@ class HomePage extends React.Component {
           <Shelf title="Tô lendo" books={this.props.reading} />
           <Shelf title="Quero ler" books={this.props.reading} />
           <Shelf title="Já li" books={this.props.reading} />
+          <Link to="/search" className="search-link">+</Link>
         </div>
       </React.Fragment>
     );
