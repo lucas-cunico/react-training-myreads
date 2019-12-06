@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Card.css'
 /**
  * PROPS
  * {
@@ -11,7 +12,7 @@ import PropTypes from 'prop-types'
 const Card = ({ image, title, authors }) => {
     //DESTRUCTURING
     //const {image, title} = props
-    return <React.Fragment>
+    return <div className="card">
         <img src={image.src} alt={image.alt} />
         <p>{title}</p>
         <ul>
@@ -19,7 +20,7 @@ const Card = ({ image, title, authors }) => {
                 return <li key={index}>{author}</li>
             })}
         </ul>
-    </React.Fragment>
+    </div>
 }
 Card.propTypes = {
     image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired
