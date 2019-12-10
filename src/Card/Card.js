@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Card.css'
+import ShelfChanger from '../ShelfChanger'
 /**
  * PROPS
  * {
@@ -9,7 +10,7 @@ import './Card.css'
  * authors
  * }
 */
-const Card = ({ image, title, authors }) => {
+const Card = ({ image, title, authors, shelf }) => {
     //DESTRUCTURING
     //const {image, title} = props
     return <div className="card">
@@ -20,6 +21,7 @@ const Card = ({ image, title, authors }) => {
                 return <li key={index}>{author}</li>
             })}
         </ul>
+        <ShelfChanger value={shelf}/>
     </div>
 }
 Card.propTypes = {

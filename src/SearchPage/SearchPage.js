@@ -33,7 +33,8 @@ class SearchPage extends Component {
                         image: {
                             src: book.imageLinks.thumbnail,
                             alt: book.subtitle
-                        }
+                        },
+                        shelf: book.shelf
                     }
                 })
                 this.setState({ books: books })
@@ -53,6 +54,7 @@ class SearchPage extends Component {
                             <Card title={book.title}
                                 image={{ src: book.image.src, alt: book.image.alt }}
                                 authors={book.authors}
+                                shelf={book.shelf}
                             />
                         </div>
                     })}

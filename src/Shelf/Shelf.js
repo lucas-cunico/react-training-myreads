@@ -10,6 +10,7 @@ const Shelf = (props) => {
                     <Card title={book.title}
                         image={{ src: book.image.src, alt: book.image.alt }}
                         authors={book.authors}
+                        shelf={book.shelf}
                     />
                 </div>
             })}

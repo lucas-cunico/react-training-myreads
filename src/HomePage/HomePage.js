@@ -4,16 +4,69 @@ import Shelf from '../Shelf'
 import {
   Link
 } from "react-router-dom";
+import * as API from '../BooksAPI'
 
 class HomePage extends React.Component {
+  state = {
+    currentlyReading: [],
+    wantToRead: [],
+    read: [],
+  }
+
+  componentDidMount(){
+    API.getAll().then(books => {
+      let currentlyReading = []
+      let wantToRead = []
+      let read = []
+      books.forEach(book => {
+        if(book.shelf === "currentlyReading"){
+          currentlyReading.push({
+            id: book.id,
+            title: book.title,
+            authors: book.authors || [],
+            image: {
+                src: book.imageLinks.thumbnail,
+                alt: book.subtitle
+            },
+            shelf: book.shelf
+          })
+        }
+        if(book.shelf === "wantToRead"){
+          wantToRead.push({
+            id: book.id,
+            title: book.title,
+            authors: book.authors || [],
+            image: {
+                src: book.imageLinks.thumbnail,
+                alt: book.subtitle
+            },
+            shelf: book.shelf
+          })
+        }
+        if(book.shelf === "read"){
+          read.push({
+            id: book.id,
+            title: book.title,
+            authors: book.authors || [],
+            image: {
+                src: book.imageLinks.thumbnail,
+                alt: book.subtitle
+            },
+            shelf: book.shelf
+          })
+        }
+      })
+      this.setState({currentlyReading, wantToRead, read})
+    })
+  }
   render() {
     return (
       <React.Fragment>
         <h1 className="list-books-title">Minhas leituras</h1>
         <div className="container home">
-          <Shelf title="Tô lendo" books={this.props.reading} />
-          <Shelf title="Quero ler" books={this.props.reading} />
-          <Shelf title="Já li" books={this.props.reading} />
+          <Shelf title="Tô lendo" books={this.state.currentlyReading} />
+          <Shelf title="Quero ler" books={this.state.wantToRead} />
+          <Shelf title="Já li" books={this.state.read} />
           <Link to="/search" className="search-link">+</Link>
         </div>
       </React.Fragment>
