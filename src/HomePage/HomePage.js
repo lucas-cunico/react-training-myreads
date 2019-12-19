@@ -49,7 +49,7 @@ class HomePage extends React.Component {
             title: book.title,
             authors: book.authors || [],
             image: {
-                src: book.imageLinks.thumbnail,
+                src: book.imageLinks && book.imageLinks.thumbnail,
                 alt: book.subtitle
             },
             shelf: book.shelf

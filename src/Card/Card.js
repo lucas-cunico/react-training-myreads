@@ -10,7 +10,7 @@ import ShelfChanger from '../ShelfChanger'
  * authors
  * }
 */
-const Card = ({ image, title, authors, shelf }) => {
+const Card = ({ image, title, authors, shelf, id }) => {
     //DESTRUCTURING
     //const {image, title} = props
     return <div className="card">
@@ -21,11 +21,12 @@ const Card = ({ image, title, authors, shelf }) => {
                 return <li key={index}>{author}</li>
             })}
         </ul>
-        <ShelfChanger value={shelf}/>
+        <ShelfChanger value={shelf} bookId={id}/>
     </div>
 }
 Card.propTypes = {
-    image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired
+    image: PropTypes.shape({ src: PropTypes.string, alt: PropTypes.string }).isRequired,
+    id: PropTypes.string.isRequired
 }
 
 export default Card

@@ -2,7 +2,8 @@
     border-radius: 4px;
     margin: 10px;
     padding: 5px;
-    transition: ease all .5s
+    transition: ease all .5s;
+    position: relative;
 }
 .card > img {
     height: 205px;

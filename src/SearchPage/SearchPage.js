@@ -31,7 +31,7 @@ class SearchPage extends Component {
                         title: book.title,
                         authors: book.authors || [],
                         image: {
-                            src: book.imageLinks.thumbnail,
+                            src: book.imageLinks && book.imageLinks.thumbnail,
                             alt: book.subtitle
                         },
                         shelf: book.shelf
@@ -55,6 +55,7 @@ class SearchPage extends Component {
                                 image={{ src: book.image.src, alt: book.image.alt }}
                                 authors={book.authors}
                                 shelf={book.shelf}
+                                id={book.id}
                             />
                         </div>
                     })}

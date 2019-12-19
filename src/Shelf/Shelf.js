@@ -11,6 +11,7 @@ const Shelf = (props) => {
                         image={{ src: book.image.src, alt: book.image.alt }}
                         authors={book.authors}
                         shelf={book.shelf}
+                        id={book.id}
                     />
                 </div>
             })}
