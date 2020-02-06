@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-training-myreads/static/css/main.d374612c.chunk.css",
+    "main.js": "/react-training-myreads/static/js/main.8fd8e595.chunk.js",
+    "main.js.map": "/react-training-myreads/static/js/main.8fd8e595.chunk.js.map",
+    "runtime-main.js": "/react-training-myreads/static/js/runtime-main.66d0e1c8.js",
+    "runtime-main.js.map": "/react-training-myreads/static/js/runtime-main.66d0e1c8.js.map",
+    "static/js/2.2793dcb5.chunk.js": "/react-training-myreads/static/js/2.2793dcb5.chunk.js",
+    "static/js/2.2793dcb5.chunk.js.map": "/react-training-myreads/static/js/2.2793dcb5.chunk.js.map",
+    "index.html": "/react-training-myreads/index.html",
+    "precache-manifest.2a652c09265f4baa3264169109a318c0.js": "/react-training-myreads/precache-manifest.2a652c09265f4baa3264169109a318c0.js",
+    "service-worker.js": "/react-training-myreads/service-worker.js",
+    "static/css/main.d374612c.chunk.css.map": "/react-training-myreads/static/css/main.d374612c.chunk.css.map",
+    "static/media/ShelfChanger.css": "/react-training-myreads/static/media/arrow-drop-down.ee6fb908.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66d0e1c8.js",
+    "static/js/2.2793dcb5.chunk.js",
+    "static/css/main.d374612c.chunk.css",
+    "static/js/main.8fd8e595.chunk.js"
+  ]
+}
